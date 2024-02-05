@@ -22,7 +22,7 @@ class PostSerializer(serializers.ModelSerializer):
 class CommentSerializers(serializers.ModelSerializer):
     class Meta:
         model = Comment
-        fields = "__all__"
+        fields = ["post","comment_body"]
 
     def validate(self, data):
         comment_body = data.get("comment_body")

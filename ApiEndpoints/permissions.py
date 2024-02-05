@@ -15,5 +15,6 @@ class IsLoggedIn(permissions.BasePermission):
         self,
         request,
         view,
-        obj):
+        obj
+        ):
         return request.user and request.user.is_active and request.user.is_staff
